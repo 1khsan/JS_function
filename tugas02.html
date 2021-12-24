@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Chat Box</title>
+	</head>
+	
+	<body>
+		<table widht="auto">
+			<tr>
+				<td>
+					<div
+					id="isi"
+					style= "width: 300px; height: 500px; border: 1px solid black; overflow: scroll;">
+					</div>
+				</td>
+			</tr>
+		</table>
+		<div style="display: flex ; margin-left:3px ;">
+			<input type="text" id="input" style="width:250px;" >
+			<button onclick="hasil()">kirim</button>
+		</div>
+	</body>
+	<script>
+		let penampung = "";
+		function hasil() {
+			let isi = document.getElementById("isi");
+			let input = document.getElementById("input");
+	
+			penampung += input.value + "<br>";
+			isi.innerHTML = penampung;
+			input.value = "";
+		}
+	</script>
+</html>
